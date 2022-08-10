@@ -65,7 +65,7 @@ enum class States : uint8_t {
 ///! Inner states of the finite automaton
 static States state = States::ZERO_START;
 
-bool bedPWMDisabled = 0;
+bool bedPWMDisabled = 1;
 
 ///! Fast PWM counter is used in the RISE and FALL states (62.5kHz)
 static uint8_t slowCounter = 0;
