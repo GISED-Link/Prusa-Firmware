@@ -7583,7 +7583,7 @@ static void lcd_selftest_setfan(uint8_t speed) {
 static void lcd_selftest_measure_fans(uint8_t delay, uint8_t col, uint8_t row) {
     // spin-up delay
     static char symbols[] = {'-', '|'};
-    static_assert(1000 / sizeof(symbols) * sizeof(symbols) == 1000);
+    // static_assert(1000 / sizeof(symbols) * sizeof(symbols) == 1000);
     while(delay--) {
         for(uint8_t i = 0; i != sizeof(symbols); ++i) {
             lcd_putc_at(col, row, symbols[i]);

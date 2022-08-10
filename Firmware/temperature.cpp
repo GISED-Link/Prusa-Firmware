@@ -2190,6 +2190,7 @@ void check_min_temp_heater0()
 
 void check_min_temp_bed()
 {
+  /*
 #if HEATER_BED_RAW_LO_TEMP > HEATER_BED_RAW_HI_TEMP
 	if (current_temperature_bed_raw >= bed_minttemp_raw) {
 #else
@@ -2202,6 +2203,7 @@ void check_min_temp_bed()
 		// which is a safer variant than just continuing printing
 		alert_automaton_bed.step(current_temperature_bed, BED_MINTEMP + TEMP_HYSTERESIS);
 	}
+ */
 }
 
 #ifdef AMBIENT_MINTEMP
@@ -2343,5 +2345,3 @@ bool has_temperature_compensation()
 #endif
 }
 #endif //PINDA_THERMISTOR
-
-
